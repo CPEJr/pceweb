@@ -41,56 +41,56 @@
                 </div>
                 <div class="form-group col-lg-8">
                     <p class="movap-nomes" align="left">Horário de entrada</p>
-                    {{#compare station.inputTime.inputHour 9 operator='<'}}
-                        {{#compare station.inputTime.inputMin 9 operator='<'}}
-                        <input type="time" class="form-control" id="intentificação" name="station[inputTime][inputHour]"
-                            value="0{{station.inputTime.inputHour}}:0{{station.inputTime.inputMin}}">
-                        {{/compare}}
-                        {{#compare station.inputTime.inputMin 9 operator='>'}}
-                        <input type="time" class="form-control" id="intentificação" name="station[inputTime][inputHour]"
-                            value="0{{station.inputTime.inputHour}}:{{station.inputTime.inputMin}}">
-                        {{/compare}}
+                    {{#compare station.inputTime.inputHour 10 operator='<'}}
+                    {{#compare station.inputTime.inputMin 10 operator='<'}}
+                    <input type="time" class="form-control" id="entrada" name="station[inputTime][inputHour]"
+                        value="0{{station.inputTime.inputHour}}:0{{station.inputTime.inputMin}}">
                     {{/compare}}
-                    {{#compare station.inputTime.inputHour 9 operator='>'}}
-                        {{#compare station.inputTime.inputMin 9 operator='<'}}
-                        <input type="time" class="form-control" id="intentificação" name="station[inputTime][inputHour]"
-                            value="{{station.inputTime.inputHour}}:0{{station.inputTime.inputMin}}">
-                        {{/compare}}
-                        {{#compare station.inputTime.inputMin 9 operator='>'}}
-                        <input type="time" class="form-control" id="intentificação" name="station[inputTime][inputHour]"
-                            value="{{station.inputTime.inputHour}}:{{station.inputTime.inputMin}}">
-                        {{/compare}}
-                        {{/compare}}
+                    {{#compare station.inputTime.inputMin 10 operator='>'}}
+                    <input type="time" class="form-control" id="entrada" name="station[inputTime][inputHour]"
+                        value="0{{station.inputTime.inputHour}}:{{station.inputTime.inputMin}}">
+                    {{/compare}}
+                    {{/compare}}
+                    {{#compare station.inputTime.inputHour 10 operator='>'}}
+                    {{#compare station.inputTime.inputMin 10 operator='<'}}
+                    <input type="time" class="form-control" id="entrada" name="station[inputTime][inputHour]"
+                        value="{{station.inputTime.inputHour}}:0{{station.inputTime.inputMin}}">
+                    {{/compare}}
+                    {{#compare station.inputTime.inputMin 10 operator='>'}}
+                    <input type="time" class="form-control" id="entrada" name="station[inputTime][inputHour]"
+                        value="{{station.inputTime.inputHour}}:{{station.inputTime.inputMin}}">
+                    {{/compare}}
+                    {{/compare}}
                     <input type="hidden" name="station[inputTime][inputMin]">
 
                 </div>
                 <div class="form-group col-lg-8">
                     <p class="movap-nomes" align="left">Horário de saída</p>
-                    {{#compare station.outputTime.outputHour 9 operator='<'}}
-                    
-                        {{#compare station.outputTime.outputMin 9 operator='<'}}
-                        <input type="time" class="form-control" id="intentificação" name="station[outputTime][outputHour]"
-                            value="0{{station.outputTime.outputHour}}:0{{station.outputTime.outputMin}}">
-                        {{/compare}}
-                    
-                        {{#compare station.outputTime.outputMin 9 operator='>'}}
-                        <input type="time" class="form-control" id="intentificação" name="station[outputTime][outputHour]"
-                            value="0{{station.outputTime.outputHour}}:{{station.outputTime.outputMin}}">
-                        {{/compare}}
-                    
+                    {{#compare station.outputTime.outputHour 10 operator='<'}}
+
+                    {{#compare station.outputTime.outputMin 10 operator='<'}}
+                    <input type="time" class="form-control" id="intentificação" name="station[outputTime][outputHour]"
+                        value="0{{station.outputTime.outputHour}}:0{{station.outputTime.outputMin}}">
                     {{/compare}}
 
-                    {{#compare station.outputTime.outputHour 9 operator='>'}}
-                        
-                        {{#compare station.outputTime.outputMin 9 operator='<'}}
-                        <input type="time" class="form-control" id="intentificação" name="station[outputTime][outputHour]"
-                            value="{{station.outputTime.outputHour}}:0{{station.outputTime.outputMin}}">
-                        {{/compare}}
-                        
-                        {{#compare station.outputTime.outputMin 9 operator='>'}}
-                        <input type="time" class="form-control" id="intentificação" name="station[outputTime][outputHour]"
-                            value="{{station.outputTime.outputHour}}:{{station.outputTime.outputMin}}">
-                        {{/compare}}
+                    {{#compare station.outputTime.outputMin 10 operator='>'}}
+                    <input type="time" class="form-control" id="intentificação" name="station[outputTime][outputHour]"
+                        value="0{{station.outputTime.outputHour}}:{{station.outputTime.outputMin}}">
+                    {{/compare}}
+
+                    {{/compare}}
+
+                    {{#compare station.outputTime.outputHour 10 operator='>'}}
+
+                    {{#compare station.outputTime.outputMin 10 operator='<'}}
+                    <input type="time" class="form-control" id="intentificação" name="station[outputTime][outputHour]"
+                        value="{{station.outputTime.outputHour}}:0{{station.outputTime.outputMin}}">
+                    {{/compare}}
+
+                    {{#compare station.outputTime.outputMin 10 operator='>'}}
+                    <input type="time" class="form-control" id="intentificação" name="station[outputTime][outputHour]"
+                        value="{{station.outputTime.outputHour}}:{{station.outputTime.outputMin}}">
+                    {{/compare}}
 
                     {{/compare}}
                     <input type="hidden" name="station[outputTime][outputMin]">
@@ -98,60 +98,46 @@
                 <div class="form-group col-lg-8">
                     <p class="movap-nomes pb-2" align="left">Dias da Semana</p>
                     {{#compare station.weekday.monday 1}}
-                    <input type="checkbox" checked name='station[weekday][monday]'
-                        value="1">Segunda</input>
+                    <input type="checkbox" checked name='station[weekday][monday]' value="1">Segunda</input>
                     {{else}}
-                    <input type="checkbox" name='station[weekday][monday]'
-                        value="1">Segunda</input>
+                    <input type="checkbox" name='station[weekday][monday]' value="1">Segunda</input>
                     {{/compare}}
 
                     {{#compare station.weekday.tuesday 1}}
-                    <input type="checkbox" checked name='station[weekday][tuesday]'
-                        value="1">Terça</input>
+                    <input type="checkbox" checked name='station[weekday][tuesday]' value="1">Terça</input>
                     {{else}}
-                    <input type="checkbox" name='station[weekday][tuesday]'
-                        value="1">Terça</input>
+                    <input type="checkbox" name='station[weekday][tuesday]' value="1">Terça</input>
                     {{/compare}}
 
                     {{#compare station.weekday.wednesday 1}}
-                    <input type="checkbox" checked name='station[weekday][wednesday]'
-                        value="1">Quarta</input>
+                    <input type="checkbox" checked name='station[weekday][wednesday]' value="1">Quarta</input>
                     {{else}}
-                    <input type="checkbox" name='station[weekday][wednesday]'
-                        value="1">Quarta</input>
+                    <input type="checkbox" name='station[weekday][wednesday]' value="1">Quarta</input>
                     {{/compare}}
 
                     {{#compare station.weekday.thursday 1}}
-                    <input type="checkbox" checked name='station[weekday][thursday]'
-                        value="1">Quinta</input>
+                    <input type="checkbox" checked name='station[weekday][thursday]' value="1">Quinta</input>
                     {{else}}
-                    <input type="checkbox" name='station[weekday][thursday]'
-                        value="1">Quinta</input>
+                    <input type="checkbox" name='station[weekday][thursday]' value="1">Quinta</input>
                     {{/compare}}
 
 
                     {{#compare station.weekday.friday 1}}
-                    <input type="checkbox" checked name='station[weekday][friday]'
-                        value="1">Sexta</input>
+                    <input type="checkbox" checked name='station[weekday][friday]' value="1">Sexta</input>
                     {{else}}
-                    <input type="checkbox" name='station[weekday][friday]'
-                        value="1">Sexta</input>
+                    <input type="checkbox" name='station[weekday][friday]' value="1">Sexta</input>
                     {{/compare}}
 
                     {{#compare station.weekday.saturday 1}}
-                    <input type="checkbox" checked name='station[weekday][saturday]'
-                        value="1">Sábado</input>
+                    <input type="checkbox" checked name='station[weekday][saturday]' value="1">Sábado</input>
                     {{else}}
-                    <input type="checkbox" name='station[weekday][saturday]'
-                        value="1">Sábado</input>
+                    <input type="checkbox" name='station[weekday][saturday]' value="1">Sábado</input>
                     {{/compare}}
 
                     {{#compare station.weekday.sunday 1}}
-                    <input type="checkbox" checked name='station[weekday][sunday]'
-                        value="1">Domingo</input>
+                    <input type="checkbox" checked name='station[weekday][sunday]' value="1">Domingo</input>
                     {{else}}
-                    <input type="checkbox" name='station[weekday][sunday]'
-                        value="1">Domingo</input>
+                    <input type="checkbox" name='station[weekday][sunday]' value="1">Domingo</input>
                     {{/compare}}
                 </div>
                 <div class="row">
