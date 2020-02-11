@@ -43,8 +43,9 @@ router.get('/getTolerance', (req, res) => {
     var data = new Date();
     var dia = data.getDate();
     var mes = data.getMonth();
+    mes++;
     var ano = data.getFullYear();
-    var fulldate = dia+"/"+mes+1+"/"+ano;
+    var fulldate = dia+"/"+mes+"/"+ano;
     console.log(fulldate);
     
     Sensor.getByCodestationandDate(stations[0].codeStation, fulldate).then((sensors) => {
@@ -62,13 +63,13 @@ router.get('/getTolerance', (req, res) => {
         if (sensor.data == 1) {
           console.log("teste");
           console.log(oi.getTime());
-          time -= oi.getTime();
+          time += oi.getTime();
           console.log(time);
         }
         if (sensor.data == 0) {
           console.log("teste");
           console.log(oi.getTime());
-          time += oi.getTime();
+          time -= oi.getTime();
           console.log(time);
         }
       });
