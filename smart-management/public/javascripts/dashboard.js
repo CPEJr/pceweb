@@ -33,7 +33,7 @@ function searchW() {//varia so a coluna de busca
   filter = input.value.toUpperCase();
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
-    for (i = 1; i < tr.length; i++) {
+  for (i = 1; i < tr.length; i++) {
     th = tr[i].getElementsByTagName("th")[2];
     if (th) {
       txtValue = th.textContent || th.innerText;
@@ -70,9 +70,9 @@ function teste(){
                     }
                   }
                 }
-                else if (station.inputTime.inputHour==hour) {
-                  if (station.inputTime.inputHour<=min) {
-                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
+                else if (station.inputTime.inputHour == hour) {
+                  if (station.inputTime.inputHour <= min) {
+                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
                   }
                 }
               }
@@ -84,20 +84,20 @@ function teste(){
             }
             break;
           case 1:
-            if (station.weekday.monday){
-              if (station.inputTime.inputHour<station.outputTime.outputHour) {
-                if (station.inputTime.inputHour<hour) {
-                  if (station.outputTime.outputHour>hour) {
-                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
-                  } else if (station.outputTime.outputHour==hour) {
-                    if (station.outputTime.outputMin>=min) {
-                      tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
+            if (station.weekday.monday) {
+              if (station.inputTime.inputHour < station.outputTime.outputHour) {
+                if (station.inputTime.inputHour < hour) {
+                  if (station.outputTime.outputHour > hour) {
+                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
+                  } else if (station.outputTime.outputHour == hour) {
+                    if (station.outputTime.outputMin >= min) {
+                      tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
                     }
                   }
                 }
-                else if (station.inputTime.inputHour==hour) {
-                  if (station.inputTime.inputHour<=min) {
-                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
+                else if (station.inputTime.inputHour == hour) {
+                  if (station.inputTime.inputHour <= min) {
+                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
                   }
                 }
               }
@@ -109,20 +109,20 @@ function teste(){
             }
             break;
           case 2:
-            if (station.weekday.tuesday){
-              if (station.inputTime.inputHour<station.outputTime.outputHour) {
-                if (station.inputTime.inputHour<hour) {
-                  if (station.outputTime.outputHour>hour) {
-                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
-                  } else if (station.outputTime.outputHour==hour) {
-                    if (station.outputTime.outputMin>=min) {
-                      tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
+            if (station.weekday.tuesday) {
+              if (station.inputTime.inputHour < station.outputTime.outputHour) {
+                if (station.inputTime.inputHour < hour) {
+                  if (station.outputTime.outputHour > hour) {
+                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
+                  } else if (station.outputTime.outputHour == hour) {
+                    if (station.outputTime.outputMin >= min) {
+                      tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
                     }
                   }
                 }
-                else if (station.inputTime.inputHour==hour) {
-                  if (station.inputTime.inputHour<=min) {
-                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
+                else if (station.inputTime.inputHour == hour) {
+                  if (station.inputTime.inputHour <= min) {
+                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
                   }
                 }
               }
@@ -134,20 +134,20 @@ function teste(){
             }
             break;
           case 3:
-            if (station.weekday.wednesday){
-              if (station.inputTime.inputHour<station.outputTime.outputHour) {
-                if (station.inputTime.inputHour<hour) {
-                  if (station.outputTime.outputHour>hour) {
-                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
-                  } else if (station.outputTime.outputHour==hour) {
-                    if (station.outputTime.outputMin>=min) {
-                      tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
+            if (station.weekday.wednesday) {
+              if (station.inputTime.inputHour < station.outputTime.outputHour) {
+                if (station.inputTime.inputHour < hour) {
+                  if (station.outputTime.outputHour > hour) {
+                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
+                  } else if (station.outputTime.outputHour == hour) {
+                    if (station.outputTime.outputMin >= min) {
+                      tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
                     }
                   }
                 }
-                else if (station.inputTime.inputHour==hour) {
-                  if (station.inputTime.inputHour<=min) {
-                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
+                else if (station.inputTime.inputHour == hour) {
+                  if (station.inputTime.inputHour <= min) {
+                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
                   }
                 }
               }
@@ -159,20 +159,20 @@ function teste(){
             }
             break;
           case 4:
-            if (station.weekday.thursday){
-              if (station.inputTime.inputHour<station.outputTime.outputHour) {
-                if (station.inputTime.inputHour<hour) {
-                  if (station.outputTime.outputHour>hour) {
-                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
-                  } else if (station.outputTime.outputHour==hour) {
-                    if (station.outputTime.outputMin>=min) {
-                      tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
+            if (station.weekday.thursday) {
+              if (station.inputTime.inputHour < station.outputTime.outputHour) {
+                if (station.inputTime.inputHour < hour) {
+                  if (station.outputTime.outputHour > hour) {
+                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
+                  } else if (station.outputTime.outputHour == hour) {
+                    if (station.outputTime.outputMin >= min) {
+                      tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
                     }
                   }
                 }
-                else if (station.inputTime.inputHour==hour) {
-                  if (station.inputTime.inputHour<=min) {
-                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
+                else if (station.inputTime.inputHour == hour) {
+                  if (station.inputTime.inputHour <= min) {
+                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
                   }
                 }
               }
@@ -184,20 +184,20 @@ function teste(){
             }
             break;
           case 5:
-            if (station.weekday.friday){
-              if (station.inputTime.inputHour<station.outputTime.outputHour) {
-                if (station.inputTime.inputHour<hour) {
-                  if (station.outputTime.outputHour>hour) {
-                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
-                  } else if (station.outputTime.outputHour==hour) {
-                    if (station.outputTime.outputMin>=min) {
-                      tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
+            if (station.weekday.friday) {
+              if (station.inputTime.inputHour < station.outputTime.outputHour) {
+                if (station.inputTime.inputHour < hour) {
+                  if (station.outputTime.outputHour > hour) {
+                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
+                  } else if (station.outputTime.outputHour == hour) {
+                    if (station.outputTime.outputMin >= min) {
+                      tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
                     }
                   }
                 }
-                else if (station.inputTime.inputHour==hour) {
-                  if (station.inputTime.inputHour<=min) {
-                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
+                else if (station.inputTime.inputHour == hour) {
+                  if (station.inputTime.inputHour <= min) {
+                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
                   }
                 }
               }
@@ -209,20 +209,20 @@ function teste(){
             }
             break;
           case 6:
-            if (station.weekday.saturday){
-              if (station.inputTime.inputHour<station.outputTime.outputHour) {
-                if (station.inputTime.inputHour<hour) {
-                  if (station.outputTime.outputHour>hour) {
-                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
-                  } else if (station.outputTime.outputHour==hour) {
-                    if (station.outputTime.outputMin>=min) {
-                      tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
+            if (station.weekday.saturday) {
+              if (station.inputTime.inputHour < station.outputTime.outputHour) {
+                if (station.inputTime.inputHour < hour) {
+                  if (station.outputTime.outputHour > hour) {
+                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
+                  } else if (station.outputTime.outputHour == hour) {
+                    if (station.outputTime.outputMin >= min) {
+                      tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
                     }
                   }
                 }
-                else if (station.inputTime.inputHour==hour) {
-                  if (station.inputTime.inputHour<=min) {
-                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
+                else if (station.inputTime.inputHour == hour) {
+                  if (station.inputTime.inputHour <= min) {
+                    tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
                   }
                 }
               }
@@ -235,13 +235,13 @@ function teste(){
         }
 
 
-      //tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th></tr>`;
+        //tableBody += `<tr><th scope="row" class="font-book text-left">${station.nameEmployed}</th><th scope="row" class="font-book text-center ${station.dataesp}">${station.dataesp}</th><th style="cursor: pointer;" onclick="location.href='/onlineTracking/user/${station.codeStation}'"><img src="https://image.flaticon.com/icons/png/512/68/68917.png" width=20 height=20></th></tr>`;
       }
 
     });
 
     $('#table-body').html(tableBody);
-    if (document.getElementById("myInput").value.toUpperCase()!="") {
+    if (document.getElementById("myInput").value.toUpperCase() != "") {
       search();
     }
     console.log(stations);
@@ -252,8 +252,8 @@ function teste(){
   });
 }
 
-function atualizar(){
-    //alert("Ta funcionando");
+function atualizar() {
+  //alert("Ta funcionando");
 
   teste();
 

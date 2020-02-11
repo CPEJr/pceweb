@@ -53,6 +53,7 @@ router.post('/receiveData::idesp::data::idmac', (req, res) => {//Recebe os dados
     var min = data.getMinutes();
     var date = data.getDate();
     var mes = data.getMonth();
+    mes++;
     var ano = data.getUTCFullYear();
     const ativa = req.params;//cria objeto dos dados recebidos
     ativa.date = date + "/" + mes + 1 + "/" + ano;//seta string data

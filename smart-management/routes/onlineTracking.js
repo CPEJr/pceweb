@@ -14,9 +14,10 @@ router.get('/',auth.isAuthenticated,auth.isManager, (req, res) => {
   res.render('manager/onlineTracking', { title: 'Acompanhamento Online', layout: 'layoutdashboardmanager' });
 });
 
-router.get('/user/:id',auth.isAuthenticated,auth.isManager, (req, res) => {
-  Station.getById(req.params.id).then((stations) => {
-    res.render('manager/onlineTrackingUser', { title: 'Acompanhamento Online', layout: 'layoutdashboardmanager', stations });
+router.get('/user/:codeStation',auth.isAuthenticated,auth.isManager, (req, res) => {
+
+  Station.getByCode(req.params.codeStation).then((stations) => {
+    res.render('manager/onlineTrackingUser', { title: 'Acompanhamento Online', layout: 'layoutdashboardmanager', stations ,...req.session});
   });
 });
 
@@ -31,6 +32,51 @@ router.get('/getstation',(req,res) => {
       console.log(stations);
       res.send(stations);
     });
+});
+
+router.get('/getTolerance', (req, res) => {
+  console.log(req.session);
+  const manager = req.session._id;
+  console.log(manager);
+  Station.getByManager(manager).then((stations) => {
+    console.log(stations[0].codeStation);
+    var data = new Date();
+    var dia = data.getDate();
+    var mes = data.getMonth();
+    mes++;
+    var ano = data.getFullYear();
+    var fulldate = dia+"/"+mes+"/"+ano;
+    console.log(fulldate);
+    
+    Sensor.getByCodestationandDate(stations[0].codeStation, fulldate).then((sensors) => {
+      console.log(sensors);
+      console.log("sensors");
+      var time = 0;
+      sensors.forEach(sensor => {
+        var oi = sensor.createdAt;
+        console.log("Time: " + moment(oi).format("HH:mm:ss"));
+        var hora = moment(oi).format("HH");
+        var minuto = moment(oi).format("mm");
+        var segundo = moment(oi).format("ss")
+        console.log(sensor);
+        console.log("----------------------------------");
+        if (sensor.data == 1) {
+          console.log("teste");
+          console.log(oi.getTime());
+          time += oi.getTime();
+          console.log(time);
+        }
+        if (sensor.data == 0) {
+          console.log("teste");
+          console.log(oi.getTime());
+          time -= oi.getTime();
+          console.log(time);
+        }
+      });
+      console.log("Tempo total");
+      console.log(time / 1000);
+    });
+  });
 });
 
 router.get('/list',auth.isAuthenticated,auth.isManager, (req, res) => {
