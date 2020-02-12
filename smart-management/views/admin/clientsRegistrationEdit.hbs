@@ -4,7 +4,7 @@
     <hr>
   </div>
 
-<!-- <form class="" action="/client/delete/{{client.id}}" method="post">
+  <!-- <form class="" action="/client/delete/{{client.id}}" method="post">
   <div class="form-group justify-content-start col-md-8 d-flex movap">
     <input type="submit" value="Deletar Cliente" class="btn btn-primary" >
   </div>
@@ -16,21 +16,24 @@
     </div>
     <div class="form-group col-lg-8">
       <p class="movap-nomes" align="left">Razão Social</p>
-      <input type="text" class="form-control" id="intentificação" name="client[corporateName]" value="{{client.corporateName}}">
+      <input type="text" class="form-control" id="intentificação" name="client[corporateName]"
+        value="{{client.corporateName}}">
     </div>
     <div class="form-group col-lg-8">
       <p class="movap-nomes" align="left">Nome Fantasia</p>
-      <input type="text" class="form-control" id="intentificação" name="client[fantasyname]" value="{{client.fantasyname}}">
+      <input type="text" class="form-control" id="intentificação" name="client[fantasyname]"
+        value="{{client.fantasyname}}">
     </div>
     <div class="form-group col-lg-8">
       <p class="movap-nomes" align="left">CNPJ</p>
       <input type="number" class="form-control" id="intentificação" name="client[cnpj]" value="{{client.cnpj}}">
     </div>
 
-  <div class="form-row pl-3">
+    <div class="form-row pl-3">
       <div class="form-group col-lg-6 col-9">
         <p class="movap-nomes" align="left" for="inputAddress">Endereço</p>
-        <input type="text" class="form-control" id="inputAddress" placeholder="" name="client[address][street]" value="{{client.address.street}}">
+        <input type="text" class="form-control" id="inputAddress" placeholder="" name="client[address][street]"
+          value="{{client.address.street}}">
       </div>
       <div class="form-group col-lg-2 col-3 pr-4">
         <p class="movap-nomes" align="left">Número</p>
@@ -40,7 +43,8 @@
     <div class="form-row pl-3">
       <div class="form-group col-lg-4 col-6 pr-2">
         <p class="movap-nomes" align="left">Cidade</p>
-        <input type="text" class="form-control" id="inputCity" name="client[address][city]" value="{{client.address.city}}">
+        <input type="text" class="form-control" id="inputCity" name="client[address][city]"
+          value="{{client.address.city}}">
       </div>
       <div class="form-group col-lg-2 col-3 pr-2 pl-2">
         <p class="movap-nomes" align="left">Estado</p>
@@ -77,12 +81,14 @@
       </div>
       <div class="form-group col-lg-2 col-3 pr-4">
         <p class="movap-nomes" align="left">CEP</p>
-        <input type="number" class="form-control" id="inputCEP" name="client[address][cep]" value="{{client.address.cep}}">
+        <input type="number" class="form-control" id="inputCEP" name="client[address][cep]"
+          value="{{client.address.cep}}">
       </div>
     </div>
     <div class="form-group col-lg-8">
       <p class="movap-nomes" align="left">E-mail</p>
-      <input type="email" class="form-control" id="intentificação" name="client[email]" value="{{client.email}}" readonly>
+      <input type="email" class="form-control" id="intentificação" name="client[email]" value="{{client.email}}"
+        readonly>
     </div>
     <div class="form-group col-lg-8">
       <p class="movap-nomes" align="left">Telefone</p>
@@ -90,7 +96,8 @@
     </div>
     <div class="form-group col-lg-8">
       <p class="movap-nomes" align="left">Nome para contato</p>
-      <input type="text" class="form-control" id="intentificação" name="client[nameContact]" value="{{client.nameContact}}">
+      <input type="text" class="form-control" id="intentificação" name="client[nameContact]"
+        value="{{client.nameContact}}">
     </div>
     <div class="form-group col-lg-8">
       <p class="movap-nomes" align="left">Status</p>
@@ -99,10 +106,18 @@
         <option>Cancelada</option>
       </select>
     </div>
-    <div class="form-group justify-content-start col-md-8 d-flex movap">
-      <input type="submit" value="CONFIRMAR" class="btn btn-primary" >
-    </div>
-
+    <div class="row">
+      <div class="d-flex pl-3  movap">
+        <button type="submit" class="mr-auto p-2 btn btn-primary">CONFIRMAR</button>
+      </div>
   </form>
-  <br><br><br><br>
+  <div class="d-flex pl-3  movap">
+    <form action="/client/delete/{{client.id}}" method="POST">
+      <button type="submit" class="mr-auto p-2 btn btn-primary"
+        onclick="return confirm('Você têm certeza que deseja excluir o cliente {{client.codClient}}?')"
+        id="excluir">EXCLUIR</button>
+    </form>
+  </div>
+</div>
+<br><br><br><br>
 </div>

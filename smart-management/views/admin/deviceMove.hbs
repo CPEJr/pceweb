@@ -5,12 +5,14 @@
 <form action="/device/{{device.id}}" method="POST">
   <div class="form-group col-lg-4">
     <p class="movap-nomes" align="left">Número de Indentificação</p>
-    <input type="text" class="form-control movap-boxcinza" id="intentificação" name="device[numId]" value="{{device.numId}}" readonly>
+    <input type="text" class="form-control movap-boxcinza" id="intentificação" name="device[numId]"
+      value="{{device.numId}}" readonly>
   </div>
 
   <div class="form-group col-lg-4">
     <p class="movap-nomes" align="left">Código do Cliente Responsável</p>
-    <input type="text" class="form-control" id="intentificação" name="device[codClient]" value="{{client.codClient}}">
+    <input type="text" class="form-control" id="intentificação" name="device[codClient]"
+      value="{{device.client.codClient}}">
   </div>
 
   <div class="form-group col-lg-4">
@@ -19,7 +21,7 @@
       <option value="Estoque">Entregue ao Cliente</option>
       <option value="Estoque">Manutenção</option>
       <option value="Estoque">Desativado</option>
-      <option value="Estoque">Estoque</option>   
+      <option value="Estoque">Estoque</option>
     </select>
   </div>
   <div class="form-group col-lg-4">
@@ -28,10 +30,10 @@
   </div>
   <div class="form-group col-lg-4">
     <p class="movap-nomes" align="left">Observações</p>
-    <textarea class="form-control" name="device[note]" cols="30" rows="4">{{device.note}}</textarea >
+    <textarea class="form-control" name="device[note]" cols="30" rows="4">{{device.note}}</textarea>
   </div>
   <div class="form-group justify-content-start col-md-8 d-flex movap">
-    <button type="submit"  class="btn btn-primary" >CONFIRMAR</button>
+    <button type="submit" class="btn btn-primary">CONFIRMAR</button>
   </div>
 
 </form>
