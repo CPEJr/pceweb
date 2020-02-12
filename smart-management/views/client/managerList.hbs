@@ -1,4 +1,5 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+  integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 <script src="/javascripts/search.js"></script>
 <div class="movap-titulo">
@@ -6,32 +7,35 @@
   <hr>
 </div>
 <div class="col">
-    <div class="row">
-        <div class="col-lg-5">
-            <div class="bg clearfix col">
-                <button type="button" class="btn btn-primary btn-info  btn-secondary "  aria-haspopup="true" aria-expanded="false"/><a  style="color:#ffffff" href="/manager/signup">NOVO</a></button>
-            </div>
-            <br>
-            <div class="input-group">                     
-                        <input  id="myInput" class="form-control" type="text" onkeyup="myFunction()" placeholder="Pesquisar" aria-label="Search">
-                         <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button">
-                                <i class="fa fa-search"></i>
-                            </button>
-                    </div>
-              </div>
-            <table class="table table-bordered table-responsive-sm mt-4">
-              <tbody id="myTable" class="element">
-                {{#each managers}}
-                <tr>
-                  <th scope="row" class="font-book text-center" onclick="location.href='/manager/edit/{{id}}'">{{name}}</th>
-                  <th width="50" scope="row" class="font-book text-center" onclick="location.href='/manager/edit/{{id}}'">. . .</th>
-                </tr>
-                {{/each}}
-              </tbody>
-            </table>
-         </div>
-   </div>
+  <div class="row">
+    <div class="col-lg-5">
+      <div class="bg clearfix col">
+        <button type="button" class="btn btn-primary btn-info  btn-secondary " aria-haspopup="true"
+          aria-expanded="false" /><a style="color:#ffffff" href="/manager/signup">NOVO</a></button>
+      </div>
+      <br>
+      <div class="input-group">
+        <input id="myInput" class="form-control" type="text" onkeyup="myFunction()" placeholder="Pesquisar"
+          aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <table class="table table-bordered table-responsive-sm mt-4">
+        <tbody id="myTable" class="element">
+          {{#each managers}}
+          <tr>
+            <th scope="row" class="font-book text-center" onclick="location.href='/manager/edit/{{id}}'">{{name}}</th>
+            <th width="50" scope="row" class="font-book text-center" onclick="location.href='/manager/edit/{{id}}'">. .
+              .</th>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 <br><br><br><br><br>
 <script type="text/javascript" src="/javascripts/edit.js">  </script>
