@@ -10,9 +10,18 @@ const Sensor = require('../models/sensor');
 const moment = require('moment');
 const router = express.Router();
 
-router.get('/receberDados', (req,res) => {
-  sensor.getAll().then((result)=>{
-    res.send(result);
+router.get('/receberDados/:codeStation', (req,res) => {
+  console.log("entrou na rota grafica");
+  console.log(req.params.codeStation);
+  Sensor.getByCodestation(req.params.codeStation).then((stations)=>{
+    res.send(stations);
+  });
+});
+
+router.get('/receberDados/:date', (req,res) =>{
+  console.log("Entrou na data");
+  Sensor.getByDate(req.params.date).then((stations) => {
+    res.send(stations);
   });
 });
 

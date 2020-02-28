@@ -1,15 +1,18 @@
 $(document).ready(update);
 
+var myChart = document.getElementsByClassName("line-chart");
 function update() {
   $.get('/receberDados', (response) => {
     updatechart(response);
     }).then(setTimeout(update, 6000));
   }
 
-functionupdatechart(data) {
+
+function updatechart(data) {
+  console.log("GRAFICOOO ENTROU")
 var eixox = []
 var eixoy = []
-for (leti = 0; i < data.length / 5; i++) {
+for (let i = 0; i < data.length / 5; i++) {
 eixoy[i] = data[i]['data'];
 eixox[i] = i;
 }

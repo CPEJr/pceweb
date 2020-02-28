@@ -6,8 +6,16 @@ const Client = require('../models/clients');
 const Station = require('../models/station');
 const Manager = require('../models/manager');
 const User = require('../models/user');
+const Sensor = require('../models/sensor');
 
 const router = express.Router();
+
+router.get('/receberDados', (req,res) => {
+  console.log("entrou na rota grafica")
+  Sensor.getAll().then((result)=>{
+    res.send(result);
+  });
+});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
