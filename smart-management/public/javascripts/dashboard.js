@@ -260,19 +260,22 @@ function atualizar(){
 
 }
 
-// Get the elements with class="column"
-var elements = document.getElementsByClassName("column");
-
-// Declare a loop variable
-var i;
-
 // List View
 function listView() {
-
+document.getElementById("ListView").style.visibility = "visible";
+document.getElementById("GridView").style.visibility = "hidden";
 }
 
 // Grid View
 function gridView() {
-
-  
+  document.getElementById("ListView").style.visibility = "hidden";
+  document.getElementById("GridView").style.visibility = "visible";
 }
+
+document.getElementById("ListView").style.position = "absolute";
+document.getElementById("GridView").style.position = "absolute";
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementById("op2").click();
+    document.getElementById("op2").focus();
+ });
